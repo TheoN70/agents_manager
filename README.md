@@ -355,9 +355,16 @@ Avant toute chose, lance `/install` a la racine du repo. La commande :
 - Scaffold les dossiers `.claude/{commands,skills,agents}/` et
   `docs/{architecture,domain,playbooks,synthesis}/` s'ils manquent.
 - Cree un squelette de `CLAUDE.md` racine si absent.
+- **Genere le brain initial** (Phase 1 ci-dessous) pour chaque projet :
+  `CLAUDE.md` racine du projet, `CLAUDE.md` par app, `docs/ARCHITECTURE.md`,
+  `docs/API.md`, `docs/AUDIT_SECURITE.md`, plus `docs/domain/GLOSSAIRE.md`
+  et `docs/architecture/{README,ADR_TEMPLATE}.md` a la racine. La Phase 1
+  decrit ce que chaque fichier doit contenir — `/install` produit les
+  brouillons, la validation metier reste a ta charge.
 
-La commande est idempotente : relance-la pour ajouter un nouveau
-projet ou regenerer une partie de la structure.
+La commande est idempotente : ne touche jamais a un fichier existant.
+Relance-la pour ajouter un nouveau projet ou completer le brain apres
+avoir supprime manuellement les fichiers a regenerer.
 
 ---
 
